@@ -1,0 +1,45 @@
+// Write a program called PrintDayInWord which prints “Sunday”, “Monday”, ... “Saturday” if the
+// int variable &quot;dayNumber&quot; is 0, 1, ..., 6, respectively.  Otherwise, it shall print &quot;Not a 
+// valid day&quot;.Use (a) a &quot;nested-if&quot; statement; (b) a &quot;switch-case-default&quot;
+// statement.
+
+import java.util.Scanner;
+public class Main {
+    public static void W22(String[] args) {
+        int num;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter the numbers between 0 and 1:");
+        num = sc.nextInt();
+
+        switch(num){
+            case 0:
+                System.out.println("SUNDAY");
+                break;
+            case 1:
+                System.out.println("MONDAY");
+                break;
+            case 2:
+                System.out.println("TUESDAY");
+                break;
+            case 3:
+                System.out.println("WEDNESDAY");
+                break;
+            case 4:
+                System.out.println("THURSDAY");
+                break;
+            case 5:
+                System.out.println("FRIDAY");
+                break;
+            case 6:
+                System.out.println("SATURDAY");
+                break;
+            default:
+                System.out.println(" IN-VALID");
+                break;
+
+        }
+
+    
+
+    }
+}
