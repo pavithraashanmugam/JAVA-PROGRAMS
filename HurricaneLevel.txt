@@ -1,0 +1,28 @@
+// Write a program that that takes the wind speed (in miles per hour) as an integer command-line
+// argument and prints whether it qualifies as a hurricane, and if so, whether it is a Category 1, 2,
+// 3, 4, or 5 hurricane. Below is a table of the wind speeds according to the Saffir-Simpson scale.
+
+public class W24{
+    public static void main(String[] args) {
+        int a = Integer.parseInt(args[0]);
+        if (a>=74 && a<=95) {
+            System.out.println("Hurricane level 1");
+        }
+        else if (a>=96 && a<=110) {
+            System.out.println("Hurricane level 2");
+        }
+        else if (a>=111 && a<=130) {
+            System.out.println("Hurricane level 3");
+        }
+        else if (a>=131 && a<=155) {
+            System.out.println("Hurricane level 4");
+        }
+        else if (a>=156) {
+            System.out.println("Hurricane level 5");
+        }
+        else {
+            System.out.println(" not a Hurricane ");
+        }
+
+    }
+}
