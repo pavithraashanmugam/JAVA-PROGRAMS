@@ -1,0 +1,23 @@
+// Write a program to accept 'n' (taken from test data) numbers of elements using dynamic memory allocation and then print the element at position 'p' (taken from test data) after sorting the elements in ascending order.
+For example:
+If the value of n is 5 and value of p is 3 then the program will accept five numbers as input from the test data, sort them in ascending order and display the third number as output.
+If the input is 20,30,90,40,80 then it will display 40 as output.
+
+
+import java.util.*;
+public class Position{
+public static void main (String args[]){
+ArrayList<Integer> a= new ArrayList<>();
+a.add(5);
+a.add(3);
+a.add(50);
+a.add(40);
+a.add(10);
+a.add(20);
+a.add(30);
+Collections.sort(a);
+System.out.println(a);
+
+System.out.println(a.get(3));
+}
+}

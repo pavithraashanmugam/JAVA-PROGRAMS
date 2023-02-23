@@ -1,0 +1,28 @@
+// Write a program which dynamically allocates two one-dimensional arrays of 'n' elements each (supplied from test data) and store their sum in a separate array and print the third array.
+
+
+import java.util.*;
+public class ArraySum{
+public static void main (String args[]){
+Scanner sc = new Scanner(System.in);
+System.out.println("enter the no of elements");
+int n= sc.nextInt();
+int a[] = new int[n];
+int b[] = new int[n];
+int c[] = new int[n];
+System.out.println("elements of first array:");
+for(int i=0;i<n;i++){
+ a[i]=sc.nextInt();
+System.out.println(a[i]);
+}
+System.out.println("elements of second array:");
+for(int i=0;i<n;i++){
+ b[i]=sc.nextInt();
+System.out.println(b[i]);
+}
+for(int i=0;i<n;i++){
+   c[i]=a[i]+b[i];
+}
+System.out.println(Arrays.toString(c));
+}
+}
