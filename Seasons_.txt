@@ -1,0 +1,26 @@
+//Seasons. Write a program that takes two command line integers M and D and prints the season corresponding to month M (1 = January, 12 = December) and day D in the northern hemisphere. Use the following table. 
+//SEASON	  FROM	          TO
+//Spring	March 21	June 20
+//Summer	June 21	        September 22
+//Fall	        September 23	December 21
+//Winter	December 21	March 20
+
+
+public class Seasons{
+public static void main(String[] args){
+int month = Integer.parseInt(args[0]);
+int date = Integer.parseInt(args[1]);
+if ((month==3 && date>=21) || (month==6 && date<=20)){
+System.out.println("SPRING");
+}
+else if ((month==6 && date>=21) || (month==9 && date<=22)){
+System.out.println("SUMMER");
+}
+else if ((month==9 && date>=23) || (month==12 && date<=21)){
+System.out.println("FALL");
+}
+else if ((month==10 && date>=22) || (month==3 && date<=20)){
+System.out.println("WINTER");
+}
+}
+}
