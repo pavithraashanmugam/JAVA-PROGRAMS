@@ -1,0 +1,102 @@
+Objectives
+This assignment has been designed so that you should have a good grasp on the concepts of
+o Inheritance &amp; Polymorphism
+o Dynamic binding
+Assignment
+Write a program that implements the following class hierarchy.
+
+Where there exists a relation of inheritance between Bill and Electricity Bill.
+//Class Bill should have following members
+//Data member
+// Reference_num //for reference number
+//Member functions
+//to take input of the data members; should be virtual
+//Input()
+//to display data members of its respective; should be virtual
+// Display()
+//Class Electricity_Bill should have following members
+//Data members
+// Units //for units
+//Per_unit_price //for per unit price
+//Tax //for tax
+//Member functions
+//to calculate total amount to be paid after deducting tax amount
+//Total_amount()
+//to take input of the data members of its respective and former class in the hierarchy
+//; should be virtual
+//Input()
+//to display data members of its respective and former class in the
+//hierarchy. This function will call Total_amount() and also display the Total amount of //bill.; should
+//be virtual
+//Display()
+//Total amount of Bill is calculated as
+//(Per_unit_price*Units) – Tax
+
+//You are required to call the display function and hence display the Electricity_Bill information
+//polymorphically (through base class object). The information to be displayed by the display function
+//of Electricity_Bill includes reference number, units, per unit price, tax and total bill amount to be
+//paid.
+//Output
+//Please enter reference number 346
+//Please enter units consumed 20
+//Please enter per unit price 2
+//Please enter tax amount 10
+//Reference number 346
+//Units 20
+//Tax 10
+//Per unit price 2
+//Amount to be paid 30
+-----------------------------------------------------------------------------------------------------------
+
+import java.util.Scanner;
+
+class Bill{
+    public int ref;
+
+    void input() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter reference number:");
+        ref = sc.nextInt();
+    }
+
+    void display() {
+        System.out.println("reference number is:" + ref);
+    }
+}
+
+class Electricitybill extends Bill{
+    Scanner sc = new Scanner(System.in);
+    int units;
+    int price;
+    int tax;
+    int total;
+
+    void inputs() {
+        System.out.println("Enter the units");
+        units = sc.nextInt();
+        System.out.println("Enter the price:");
+        price = sc.nextInt();
+        System.out.println("Enter the tax:");
+        tax = sc.nextInt();
+    }
+
+    void total() {
+        total = (price * units) - tax;
+        System.out.println("the total price is" + total);
+    }
+
+    void displays() {
+        System.out.println("reference : " + ref);
+        System.out.println("units : " + units);
+        System.out.println("price : " + price);
+        System.out.println("tax : " + tax);
+    }
+
+    public static void main(String args[]) {
+        Electricitybill e = new Electricitybill();
+        e.input();
+        e.inputs();
+        e.displays();
+        e.total();
+    }
+}
